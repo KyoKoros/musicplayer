@@ -45,6 +45,7 @@ def show_music_player():
     Resume_button.grid(row=2, column=3, padx=10, pady=10)
     previous_button.grid(row=2, column=4, padx=10, pady=10)
     next_button.grid(row=2, column=5, padx=10, pady=10)
+    pass
 
 # Function to log out and show login/register widgets
 def logout_user():
@@ -171,7 +172,7 @@ def Next():
 
 root = Tk()
 root.title('Kyo Music Player App')
-root.geometry("600x800")  # Set the initial dimensions of the window
+root.geometry("600x800")
 root.resizable(False, False)
 mixer.init()
 
@@ -299,5 +300,9 @@ login_status = StringVar()
 login_status_label = Label(root, textvariable=login_status, fg="green")
 login_status_label.grid(row=14, column=0, columnspan=2, pady=5)
 
-root.after(1000, update_progress_bar)
-root.mainloop()
+def main():
+    root.after(1000, update_progress_bar)
+    root.mainloop()
+
+if __name__ == "__main__":
+    main()
