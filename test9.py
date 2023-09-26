@@ -293,7 +293,7 @@ login_password = Entry(root, show="*")
 login_password.grid(row=12, column=1, pady=5)
 
 login_button = Button(root, text="Login", command=login_user)
-login_button.grid(row=13, column=0, columnspan=2, pady=10)
+login_button.grid(row=13, column=0, columnspan=3, pady=10)
 
 login_status = StringVar()
 login_status_label = Label(root, textvariable=login_status, fg="green")
