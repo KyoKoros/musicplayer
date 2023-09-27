@@ -69,8 +69,18 @@ def show_music_player():
 
 '''Function to log out and show login/register widgets'''
 def logout_user():
+    global song_paths  # Access the global variable
+    song_paths = {}  # Clear the playlist
+
+    # Clear the song info
+    song_info['text'] = ""
+
+    # Show login/register widgets and clear login status
     show_login_register_widgets()
     clear_login_status()
+
+    # Reset the window size to the initial size
+    root.geometry("600x800")
 
 '''Function to show login/register widgets and clear login status'''
 def show_login_register_widgets():
